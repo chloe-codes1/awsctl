@@ -1,0 +1,14 @@
+vpc:
+  VpcID:
+
+subnet:
+  privateSubnet:
+    AZone:
+    BZone:
+    CZone:
+    DZone:
+  serverlessSubnet:
+    AZone:
+    BZone:
+    CZone:
+    DZone:
