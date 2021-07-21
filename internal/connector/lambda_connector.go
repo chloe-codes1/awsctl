@@ -1,11 +1,11 @@
 package connector
 
 import (
+	"awsctl/internal/config"
 	"fmt"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/lambda"
-	"lambda-manager/internal/config"
 )
 
 // Returns only the first 50 lambdas

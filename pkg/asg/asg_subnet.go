@@ -1,9 +1,9 @@
 package asg
 
 import (
+	"awsctl/internal/config"
+	"awsctl/internal/connector"
 	"fmt"
-	"lambda-manager/internal/config"
-	"lambda-manager/internal/connector"
 	"strings"
 )
 
