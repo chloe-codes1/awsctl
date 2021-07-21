@@ -17,6 +17,7 @@ package cmd
 
 import (
 	"awsctl/pkg/asg"
+
 	"github.com/spf13/cobra"
 )
 
@@ -24,7 +25,7 @@ import (
 var listAsgInSpecificSubnetCmd = &cobra.Command{
 	Use:   "list-asg-in-specific-subnet",
 	Short: "List Auto Scaling Group in specific subnet",
-	Long: ``,
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		asg.ListAsgInSpecificSubnet()
 	},
@@ -32,14 +33,4 @@ var listAsgInSpecificSubnetCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(listAsgInSpecificSubnetCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// listAsgInSpecificSubnetCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// listAsgInSpecificSubnetCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
