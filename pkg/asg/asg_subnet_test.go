@@ -1,8 +1,8 @@
 package asg
 
 import (
+	"awsctl/internal/config"
 	"github.com/stretchr/testify/suite"
-	"lambda-manager/internal/config"
 	"strings"
 	"testing"
 )
