@@ -1,17 +1,17 @@
 package asg
 
 import (
-	"awsctl/internal/config"
-	"awsctl/internal/connector"
 	"fmt"
 	"strings"
+
+	"awsctl/internal/config"
+	"awsctl/internal/connector"
 )
 
 func ListAsgInSpecificSubnet(){
 	var asgNames []string
 	for _, asg := range connector.DescribeAutoScalingGroups(){
 		for _, subnet := range strings.Split(*asg.VPCZoneIdentifier, ","){
-
 			switch subnet {
 			case
 				config.SubnetConf.PrivateSubnet.AZone,

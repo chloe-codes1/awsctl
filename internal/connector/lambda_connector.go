@@ -8,7 +8,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/lambda"
 )
 
-// Returns only the first 50 lambdas
+// Returns only the first 50 lambdas.
 func ListFunctions() lambda.ListFunctionsOutput{
 	svc := GetLambdaService()
 	result, err := svc.ListFunctions(&lambda.ListFunctionsInput{
@@ -33,7 +33,7 @@ func ListFunctions() lambda.ListFunctionsOutput{
 	return *result
 }
 
-// Return all lambdas
+// Return all lambdas.
 func ListFunctionsPages() []*lambda.FunctionConfiguration {
 	svc := GetLambdaService()
 	var result []*lambda.FunctionConfiguration
@@ -68,7 +68,6 @@ func GetFunction(funcName string) lambda.GetFunctionOutput{
 				fmt.Println(aerr.Error())
 			}
 		} else {
-
 			fmt.Println(err.Error())
 		}
 	}

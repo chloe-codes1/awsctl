@@ -2,6 +2,7 @@ package connector
 
 import (
 	"fmt"
+
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/autoscaling"
 )
@@ -12,9 +13,7 @@ func DescribeAutoScalingGroups() []*autoscaling.Group {
 
 	err := svc.DescribeAutoScalingGroupsPages(&autoscaling.DescribeAutoScalingGroupsInput{},
 		func(page *autoscaling.DescribeAutoScalingGroupsOutput, _ bool) bool {
-			for _, asg := range page.AutoScalingGroups {
-				result = append(result, asg)
-			}
+			result = append(result, page.AutoScalingGroups...)
 			return true
 		},
 	)

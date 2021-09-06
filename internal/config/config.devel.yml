@@ -1,14 +1,10 @@
 vpc:
-  VpcID:
+  VpcID: vpc-0234f96ed92bb1926  # devel.seoul
 
 subnet:
   privateSubnet:
-    AZone:
-    BZone:
-    CZone:
-    DZone:
+    AZone: subnet-01396ca99e1f1aa76  # pri.a.devel.seoul
+    CZone: subnet-03b232b0ba870e088  # pri.c.devel.seoul
   serverlessSubnet:
-    AZone:
-    BZone:
-    CZone:
-    DZone:
+    AZone: subnet-0fe61765d85669dd5
+    CZone: subnet-08c21930e68884d43

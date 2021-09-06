@@ -1,9 +1,10 @@
 package config
 
 import (
-	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
+
+	"github.com/pkg/errors"
 )
 
 var (
