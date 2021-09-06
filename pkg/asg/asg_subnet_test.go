@@ -17,7 +17,7 @@ func TestASGSubnet(t *testing.T){
 }
 
 func (suite *ASGSubnetSuite) SetupSuite(){
-	configFile := strings.Join([]string{"internal/config/config.devel.yml"}, "")
+	configFile := strings.Join([]string{"../../internal/config/config.devel.yml"}, "")
 
 	conf, err := config.ReadConfig(configFile)
 	if err != nil {
