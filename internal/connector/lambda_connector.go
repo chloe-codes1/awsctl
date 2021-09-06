@@ -3,13 +3,14 @@ package connector
 import (
 	"awsctl/internal/config"
 	"fmt"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/lambda"
 )
 
 // Returns only the first 50 lambdas
-func ListFunctions() lambda.ListFunctionsOutput{
+func ListFunctions() lambda.ListFunctionsOutput {
 	svc := GetLambdaService()
 	result, err := svc.ListFunctions(&lambda.ListFunctionsInput{
 		MaxItems: aws.Int64(123),
@@ -38,17 +39,17 @@ func ListFunctionsPages() []*lambda.FunctionConfiguration {
 	svc := GetLambdaService()
 	var result []*lambda.FunctionConfiguration
 	err := svc.ListFunctionsPages(&lambda.ListFunctionsInput{},
-					func(page *lambda.ListFunctionsOutput, lastPage bool) bool {
-						result = append(result, page.Functions...)
-						return !lastPage
-					})
+		func(page *lambda.ListFunctionsOutput, lastPage bool) bool {
+			result = append(result, page.Functions...)
+			return !lastPage
+		})
 	if err != nil {
 		return nil
 	}
 	return result
 }
 
-func GetFunction(funcName string) lambda.GetFunctionOutput{
+func GetFunction(funcName string) lambda.GetFunctionOutput {
 	svc := GetLambdaService()
 	result, err := svc.GetFunction(&lambda.GetFunctionInput{
 		FunctionName: aws.String(funcName),
@@ -75,7 +76,7 @@ func GetFunction(funcName string) lambda.GetFunctionOutput{
 	return *result
 }
 
-func UpdateFunctionConfiguration(funcName string) *lambda.FunctionConfiguration{
+func UpdateFunctionConfiguration(funcName string) *lambda.FunctionConfiguration {
 	svc := GetLambdaService()
 	input := &lambda.UpdateFunctionConfigurationInput{
 		FunctionName: aws.String(funcName),

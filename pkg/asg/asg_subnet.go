@@ -7,11 +7,10 @@ import (
 	"strings"
 )
 
-func ListAsgInSpecificSubnet(){
+func ListAsgInSpecificSubnet() {
 	var asgNames []string
-	for _, asg := range connector.DescribeAutoScalingGroups(){
-		for _, subnet := range strings.Split(*asg.VPCZoneIdentifier, ","){
-
+	for _, asg := range connector.DescribeAutoScalingGroups() {
+		for _, subnet := range strings.Split(*asg.VPCZoneIdentifier, ",") {
 			switch subnet {
 			case
 				config.SubnetConf.PrivateSubnet.AZone,

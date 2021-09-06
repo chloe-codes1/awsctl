@@ -9,9 +9,9 @@ import (
 var c = AWSClient{}
 
 type AWSClient struct {
-	session *session.Session
+	session       *session.Session
 	LambdaService *lambda.Lambda
-	ASGService *autoscaling.AutoScaling
+	ASGService    *autoscaling.AutoScaling
 }
 
 func getSession() *session.Session {

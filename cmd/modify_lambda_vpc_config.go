@@ -17,6 +17,7 @@ package cmd
 
 import (
 	"awsctl/pkg/lambda"
+
 	"github.com/spf13/cobra"
 )
 
@@ -24,7 +25,7 @@ import (
 var modifyLambdaVpcConfigCmd = &cobra.Command{
 	Use:   "modify-lambda-vpc-config",
 	Short: "Modify lambda VPC subnet configurations",
-	Long: ``,
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		lambda.ModifyLambdaVpcConfig()
 	},
