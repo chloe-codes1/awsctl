@@ -7,6 +7,9 @@ help:
 	@echo " make run        - run this project"
 	@echo " make docker     - build docker image"
 
+test:
+	@go test ./...
+
 build:
 	@mkdir -p bin
 	@GO111MODULE=on CGO_ENABLED=0 go build -o $(BUILD_DIR)/awsctl ./main.go
