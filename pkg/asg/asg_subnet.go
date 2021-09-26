@@ -25,7 +25,6 @@ func ListAsgInSpecificSubnet() {
 				}
 				asgNames = append(asgNames, asgName)
 				fmt.Println("ASG: ", asgName, " LB: ", lbName)
-				break
 			}
 		}
 	}
