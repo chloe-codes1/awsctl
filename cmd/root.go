@@ -30,7 +30,7 @@ var (
 	env     string
 )
 
-// rootCmd represents the base command when called without any subcommands
+// rootCmd represents the base command when called without any subcommands.
 var rootCmd = &cobra.Command{
 	Use:   "awsctl",
 	Short: "Manage your AWS resources easily and efficiently",

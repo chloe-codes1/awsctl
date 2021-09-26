@@ -34,7 +34,7 @@ func ListFunctions() lambda.ListFunctionsOutput {
 	return *result
 }
 
-// Return all lambdas
+// Return all lambdas.
 func ListFunctionsPages() []*lambda.FunctionConfiguration {
 	svc := GetLambdaService()
 	var result []*lambda.FunctionConfiguration
