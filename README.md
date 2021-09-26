@@ -1,11 +1,13 @@
 # AWSCTL
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/chloe-codes1/awsctl)](https://goreportcard.com/report/github.com/chloe-codes1/awsctl) [![Coverage Status](https://coveralls.io/repos/github/chloe-codes1/awsctl/badge.svg?branch=main)](https://coveralls.io/github/chloe-codes1/awsctl?branch=main)
+
 > 👩🏻‍🔧 Manage your AWS resources easily and efficiently
 
 <br>
 <br>
 
-```
+```AsciiDoc
                          _   _ 
                         | | | |
   __ ___      _____  ___| |_| |

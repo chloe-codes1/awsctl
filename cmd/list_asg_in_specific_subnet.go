@@ -21,7 +21,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// listAsgInSpecificSubnetCmd represents the listAsgInSpecificSubnet command
+// listAsgInSpecificSubnetCmd represents the listAsgInSpecificSubnet command.
 var listAsgInSpecificSubnetCmd = &cobra.Command{
 	Use:   "list-asg-in-specific-subnet",
 	Short: "List Auto Scaling Group in specific subnet",

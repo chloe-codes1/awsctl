@@ -1,27 +1,28 @@
 package config
 
 import (
+	"io/ioutil"
+
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
-	"io/ioutil"
 )
 
 var (
-	VPCConf *VPCConfig
+	VPCConf    *VPCConfig
 	SubnetConf *SubnetConfig
 )
 
 type AppConfig struct {
-	VPC       VPCConfig `yaml:"vpc"`
-	Subnet 	SubnetConfig 	`yaml:"subnet"`
+	VPC    VPCConfig    `yaml:"vpc"`
+	Subnet SubnetConfig `yaml:"subnet"`
 }
 
-type VPCConfig struct{
+type VPCConfig struct {
 	VpcID string `yaml:"VpcID"`
 }
 
 type SubnetConfig struct {
-	PrivateSubnet PrivateSubnetConfig `yaml:"privateSubnet"`
+	PrivateSubnet    PrivateSubnetConfig    `yaml:"privateSubnet"`
 	ServerlessSubnet ServerlessSubnetConfig `yaml:"serverlessSubnet"`
 }
 

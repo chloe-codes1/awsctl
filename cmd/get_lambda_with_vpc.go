@@ -17,14 +17,15 @@ package cmd
 
 import (
 	"awsctl/pkg/lambda"
+
 	"github.com/spf13/cobra"
 )
 
-// getLambdaWithVpcCmd represents the getLambdaWithVpc command
+// getLambdaWithVpcCmd represents the getLambdaWithVpc command.
 var getLambdaWithVpcCmd = &cobra.Command{
 	Use:   "get-lambda-with-vpc",
 	Short: "Get Lambda functions with VPC configured",
-	Long: ``,
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		lambda.GetLambdaWithVpc()
 	},
