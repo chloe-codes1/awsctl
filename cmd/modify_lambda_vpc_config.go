@@ -21,7 +21,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// modifyLambdaVpcConfigCmd represents the modifyLambdaVpcConfig command
+// modifyLambdaVpcConfigCmd represents the modifyLambdaVpcConfig command.
 var modifyLambdaVpcConfigCmd = &cobra.Command{
 	Use:   "modify-lambda-vpc-config",
 	Short: "Modify lambda VPC subnet configurations",

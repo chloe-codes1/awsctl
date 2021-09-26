@@ -21,7 +21,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// getLambdaWithVpcCmd represents the getLambdaWithVpc command
+// getLambdaWithVpcCmd represents the getLambdaWithVpc command.
 var getLambdaWithVpcCmd = &cobra.Command{
 	Use:   "get-lambda-with-vpc",
 	Short: "Get Lambda functions with VPC configured",
