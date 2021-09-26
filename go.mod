@@ -1,6 +1,6 @@
 module awsctl
 
-go 1.16
+go 1.11
 
 require (
 	github.com/aws/aws-sdk-go v1.38.8
